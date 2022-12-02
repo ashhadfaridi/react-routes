@@ -10,7 +10,7 @@ function Title({ title, more = false }) {
 
 			{more && (
 				<NavLink className={"text-xs hover:underline font-semibold uppercase text-link tracking-wider"} to={more}>
-					SEE ALL
+					SEE ALLL
 				</NavLink>
 			)}
 		</header>
