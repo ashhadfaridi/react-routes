@@ -1,8 +1,13 @@
 import { Menu } from '@headlessui/react'
 import { Icon } from '../Icons';
+import { useHistory } from "react-router-dom";
+
 
 function Auth() {
-
+    const history = useHistory();
+    const navigateToHome = () => {
+        history.push('.logout')
+    }
     const user = {
         name: 'Your Name',
         avatar: 'https://www.google.com/aclk?sa=l&ai=DChcSEwiKuL_ilK37AhWIEkwKHU7oAkkYABABGgJvYQ&sig=AOD64_2mbyg2oMawsJUeO7wKafuTKSm-_A&adurl&ctype=5&ved=2ahUKEwjcx67ilK37AhVjnWoFHRi4A28Qvhd6BAgBEGw'
@@ -45,7 +50,7 @@ function Auth() {
                             {({ active }) => (
                                 <a
                                     className={`h-10 flex items-center px-2 text-sm rounded ${active && 'bg-white bg-opacity-10'}`}
-                                    href="#"
+                                    onClick={navigateToHome}
                                 >
                                     Log out
                                 </a>
